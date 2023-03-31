@@ -1,0 +1,139 @@
+.game{
+    overflow:hidden;
+    position:relative;
+    width:750px;
+    height:250px;
+    border:2px black solid;
+    margin:auto;
+    user-select: none;
+}
+
+#ground{
+    
+    position:absolute;
+    width:200%;
+    
+    bottom:0;
+    left:0;
+
+}
+
+.pathActive{
+    animation:pathAnimate 1.5s linear infinite;
+}
+
+@keyframes pathAnimate{
+    0%{
+        left:0;
+    }
+    100%{
+        left:-750px;
+    }
+}
+ #score{
+     position:absolute;
+     font-size: 3vmin;
+     right:1vmin;
+     top:1vmin;
+ }
+
+ #gameOver{
+    display:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    position:absolute;
+    left: 250px;
+    top:125px;
+    width:362px;
+    color:darkgray;
+ }
+
+ #gameOver #play{
+    text-align: center;
+    position:relative;
+    font-size: 20px;
+    left:-60px;
+ }
+
+ #trex{
+    width:50px;
+    height:50px;
+    background-image:url(imgs/trex.png);
+    background-size:50px 50px;
+    position:relative;
+    top: 200px;
+} 
+
+.jump{
+     animation:jump 0.5s linear;
+}
+   
+
+@keyframes jump{
+    0%{
+        top:200px;
+    }
+    45%{
+        top:120px;
+    }
+    55%{
+        top:120px;
+    }
+    100%{
+        top:200px;
+    }
+
+}
+
+#cactus{
+    height:30px;
+    width:20px;
+    position:absolute;
+    bottom:0px ;
+    left:700px;
+    background-image: url(imgs/cactus.png);
+    background-size: 20px 30px;
+    
+}
+
+.blockActive{
+    animation: cactusAnimate 1.5s linear infinite;
+}
+
+
+
+
+@keyframes cactusAnimate{
+    0%{
+        left:700px;
+    }
+    100%{
+        left:-10px;
+    }
+}
+
+#cloud{
+    height:80px;
+    width:200%;
+    position:absolute;
+    top:30px;
+    left:0px;
+    background-image: url(imgs/cloud.jpg);
+    background-size: auto;
+
+}
+
+.cloudActive{
+    animation:cloudAnimate 50s linear infinite;
+}
+
+@keyframes cloudAnimate{
+    0%{
+        left:0px;
+    }
+    100%{
+        left:-750px;
+    }
+}
+
+
